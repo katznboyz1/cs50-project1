@@ -16,3 +16,10 @@ def route_rootIndex():
     
     #return the template for /
     return flask.render_template('rootIndex.html')
+
+#the temporary development page
+@app.route('/test', methods = ['GET', 'POST'])
+def route_rootTest():
+
+    #return a message
+    return 'Testing page'
