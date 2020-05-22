@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}Search{% endblock %}
+{% block bodyContent %}
+<div class = 'loginFormWrapper fadeInDown'>
+    <div id = 'loginFormParent'>
+        <form id = 'loginForm' action = "{{ url_for('route_rootAuthLogin') }}" method = 'post'>
+            <input class = 'fadeIn first' type = 'text' placeholder = 'Username' name = 'username'/>
+            <input class = 'fadeIn second' type = 'password' placeholder = 'Password' name = 'password'/>
+            <input class = 'fadeIn third' type = 'submit' value = 'Log In'/>
+        </form>
+        <div id = 'loginFormChildFooter'>
+            <a class = 'underlineHover' href = "{{ url_for('route_rootRegister') }}">Don't have an account?</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

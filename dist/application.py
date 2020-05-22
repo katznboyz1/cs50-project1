@@ -25,8 +25,16 @@ def route_rootIndex():
 #the login page
 @app.route('/login', methods = ['GET', 'POST'])
 def route_rootLogin():
+    
+    #return the template for /
+    return flask.render_template('rootLogin.html', loggedIn = False if flask.session.get('logged_in') == None else True)
 
-    return 'tmp login page'
+#the login authentication page
+@app.route('/authlogin', methods = ['POST'])
+def route_rootAuthLogin():
+    
+    #return the template for /
+    return 'login tmp auth'
 
 #the register page
 @app.route('/register', methods = ['GET', 'POST'])
