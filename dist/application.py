@@ -7,6 +7,9 @@ import flask
 #the application variable for flask
 app = flask.Flask(__name__)
 
+#the path to the static directory
+app._static_folder = 'static'
+
 #the home page/search page for books
 @app.route('/', methods = ['GET', 'POST'])
 def route_rootIndex():
