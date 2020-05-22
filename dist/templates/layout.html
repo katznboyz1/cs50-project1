@@ -4,6 +4,10 @@
         <title>Readit - {% block pageTitle %}{% endblock %}</title>
         <meta charset = 'utf-8'/>
         <link rel = 'icon' href = "{{ url_for('static', filename = 'images/readit-logo-128x128.png') }}"/>
+        <link rel = 'stylesheet' href = "{{ url_for('static', filename = 'css/bootstrap-4.3.1.min.css') }}">
+        <script src = "{{ url_for('static', filename = 'js/jquery-3.5.1.min.js') }}"></script>
+        <script src = "{{ url_for('static', filename = 'js/popper-2.4.0.min.js') }}"></script>
+        <script src = "{{ url_for('static', filename = 'js/bootstrap-4.3.1.min.js') }}"></script>
     </head>
     <body>
         {% block bodyContent %}
