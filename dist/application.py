@@ -8,6 +8,8 @@ import flask
 app = flask.Flask(__name__)
 
 #the home page/search page for books
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def route_rootIndex():
-    return 'aaa'
+    
+    #return the template for /
+    return flask.render_template('rootIndex.html')
