@@ -1,0 +1,7 @@
+POST   / - search page for books
+GET    /api/<isbn> - api search route for books
+POST   /profiles - your user profile with your reviews
+POST   /profiles/<userid> - a specific users profile page
+POST   /search/isbn/<isbn> - search for books by isbn
+POST   /search/author/<authorname> - search for books by author name
+POST   /search/title/<title> - search for books by title
