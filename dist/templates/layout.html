@@ -25,6 +25,8 @@
                     {% if not loggedIn %}
                     <a class = 'nav-item nav-link active' href = "{{ url_for('route_rootLogin') }}">Log In</a>
                     <a class = 'nav-item nav-link active' href = "{{ url_for('route_rootRegister') }}">Register</a>
+                    {% else %}
+                    <a class = 'nav-item nav-link active' href = "{{ url_for('route_rootTest') }}">Register</a>
                     {% endif %}
                 </div>
             </div>

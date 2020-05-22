@@ -33,8 +33,17 @@ def route_rootLogin():
 @app.route('/authlogin', methods = ['POST'])
 def route_rootAuthLogin():
     
-    #return the template for /
-    return 'login tmp auth'
+    #get the username and password from the form
+    password, username = str(flask.request.form.get('password')), str(flask.request.form.get('username'))
+
+    #check if the login was successful
+    loginSuccess = False
+
+    #serve the webpage
+    if (loginSuccess):
+        return flask.redirect(flask.url_for('route_rootIndex'))
+    else:
+        return 'login failure'
 
 #the register page
 @app.route('/register', methods = ['GET', 'POST'])
