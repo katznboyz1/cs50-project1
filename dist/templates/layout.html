@@ -19,7 +19,7 @@
             </button>
             <div class = 'collapse navbar-collapse' id = 'navbarDropdown'>
                 <div class = 'navbar-nav'>
-                    <a class = 'nav-item nav-link active' href = "{{ url_for('route_rootTest') }}">Search</a>
+                    <a class = 'nav-item nav-link active' href = "{{ url_for('route_rootIndex') }}">Search</a>
                     <a class = 'nav-item nav-link {% if loggedIn %}active{% else %}disabled{% endif %}' href = "{{ url_for('route_rootTest') }}">My Profile</a>
                     <a class = 'nav-item nav-link {% if loggedIn %}active{% else %}disabled{% endif %}' href = "{{ url_for('route_rootTest') }}">API</a>
                     {% if not loggedIn %}
