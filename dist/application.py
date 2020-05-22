@@ -18,15 +18,9 @@ flask_session.Session(app)
 #the home page/search page for books
 @app.route('/', methods = ['GET', 'POST'])
 def route_rootIndex():
-
-    #get if the user is logged in
-    if (flask.session.get('logged_in') is None):
-        loggedIn = False
-    else:
-        loggedIn = True
     
     #return the template for /
-    return flask.render_template('rootIndex.html', loggedIn = loggedIn)
+    return flask.render_template('rootIndex.html', loggedIn = False if flask.session.get('logged_in') == None else True)
 
 #the login page
 @app.route('/login', methods = ['GET', 'POST'])
