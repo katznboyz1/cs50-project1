@@ -95,7 +95,7 @@ def route_rootLogout():
 def route_rootAuthRegister():
 
     #get the username and password from the form
-    password, username = str(flask.request.form.get('password')), str(flask.request.form.get('username'))
+    password, password2, username = str(flask.request.form.get('password')), str(flask.request.form.get('passwordRepeat')), str(flask.request.form.get('username'))
 
     #variable for whether or not the registry was successful
     registrySuccess = True
@@ -120,6 +120,11 @@ def route_rootAuthRegister():
     #check that the password is greater than or equal to 8 characters
     if (len(password) <= 8):
         registryError = 'Your password must be 8+ characters long.'
+        registrySuccess = False
+    
+    #check that the passwords match
+    if (password != password2):
+        registryError = 'The passwords you entered don\'t match.'
         registrySuccess = False
     
     #check if the username exists in the users table

@@ -8,6 +8,7 @@
         <form id = 'loginForm' action = "{{ url_for('route_rootAuthRegister') }}" method = 'post'>
             <input type = 'text' placeholder = 'New Username' name = 'username'/>
             <input type = 'password' placeholder = 'Unique Password' name = 'password'/>
+            <input type = 'password' placeholder = 'Confirm Password' name = 'passwordRepeat'/>
             <input type = 'submit' value = 'Register Account'/>
         </form>
         <p id = 'loginErrorText'>{{ registerErrorMessage }}</p>
