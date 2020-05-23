@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block pageTitle %}Register{% endblock %}
+{% block bodyContent %}
+<div class = 'loginFormWrapper'>
+    <div id = 'loginFormParent'>
+        <img id = 'loginFormTopImage' src = "{{ url_for('static', filename = 'images/readit-logo-128x128.png') }}">
+        <p>Enter the details for your new account below</p>
+        <form id = 'loginForm' action = "{{ url_for('route_rootAuthRegister') }}" method = 'post'>
+            <input type = 'text' placeholder = 'New Username' name = 'username'/>
+            <input type = 'password' placeholder = 'Unique Password' name = 'password'/>
+            <input type = 'submit' value = 'Register Account'/>
+        </form>
+        <p id = 'loginErrorText'>{{ registerErrorMessage }}</p>
+    </div>
+</div>
+{% endblock %}
