@@ -128,7 +128,7 @@ def route_rootAuthRegister():
         registrySuccess = False
     
     #check that the password is greater than or equal to 8 characters
-    if (len(password) <= 8):
+    if (len(password) < 8):
         registryError = 'Your password must be 8+ characters long.'
         registrySuccess = False
     
