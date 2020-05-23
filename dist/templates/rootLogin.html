@@ -8,6 +8,7 @@
             <input class = 'fadeIn second' type = 'password' placeholder = 'Password' name = 'password'/>
             <input class = 'fadeIn third' type = 'submit' value = 'Log In'/>
         </form>
+        <p id = 'loginErrorText'>{{ loginErrorMessage }}</p>
         <div id = 'loginFormChildFooter'>
             <a class = 'underlineHover' href = "{{ url_for('route_rootRegister') }}">Don't have an account?</a>
         </div>

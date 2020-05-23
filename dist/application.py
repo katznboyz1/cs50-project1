@@ -26,8 +26,8 @@ def route_rootIndex():
 @app.route('/login', methods = ['GET', 'POST'])
 def route_rootLogin():
     
-    #return the template for /
-    return flask.render_template('rootLogin.html', loggedIn = False if flask.session.get('logged_in') == None else True)
+    #return the template for /login
+    return flask.render_template('rootLogin.html', loggedIn = False if flask.session.get('logged_in') == None else True, loginErrorMessage = '')
 
 #the login authentication page
 @app.route('/authlogin', methods = ['POST'])
@@ -43,8 +43,9 @@ def route_rootAuthLogin():
     if (loginSuccess):
         return flask.redirect(flask.url_for('route_rootIndex'))
     else:
-        return 'login failure'
 
+        #return the template for /login with an error message
+        return flask.render_template('rootLogin.html', loggedIn = False if flask.session.get('logged_in') == None else True, loginErrorMessage = 'Incorrect username or password!')
 #the register page
 @app.route('/register', methods = ['GET', 'POST'])
 def route_rootRegister():
