@@ -1,7 +1,7 @@
 WIP    GET/POST   / - search page for books
 WIP    GET        /api/<isbn> - api search route for books
 WIP    GET/POST   /profiles - your user profile with your reviews
-WIP    GET/POST   /profiles/<userid> - a specific users profile page
+WIP    GET/POST   /profiles/<username> - a specific users profile page
 WIP    GET/POST   /search/isbn/<isbn> - search for books by isbn
 WIP    GET/POST   /search/author/<authorname> - search for books by author name
 WIP    GET/POST   /search/title/<title> - search for books by title
