@@ -14,5 +14,12 @@
         <button class = 'btn col-lg-1 col-sm-2 btn-outline-primary' type = 'submit'>Search</button>
     </form>
     <p id = 'mainBookSearchContentText2'>Or check out a randomly selected one:</p>
+    <ul class = 'list-group'>
+        {% for book in books %}
+            <li class = 'list-group-item'>
+                <p><b><a href = "{{ url_for('route_rootBook', isbn = book.isbn) }}"><span>{{ book.title }}</span></a></b>, by, <span>{{ book.author }}</span> <i><sup><span>({{ book.year }})</span></sup></i></p>
+            </li>
+        {% endfor %}
+    </ul>
 </div>
 {% endblock %}

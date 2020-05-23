@@ -22,9 +22,19 @@ flask_session.Session(app)
 #the home page/search page for books
 @app.route('/', methods = ['GET', 'POST'])
 def route_rootIndex():
+
+    #get a list of random books
+    books = databaseDatabase.execute('SELECT * FROM books ORDER BY RANDOM() LIMIT 20') #make these books into clickable links
     
     #return the template for /
-    return flask.render_template('rootIndex.html', loggedIn = False if flask.session.get('logged_in') == None else True)
+    return flask.render_template('rootIndex.html', loggedIn = False if flask.session.get('logged_in') == None else True, books = books)
+
+#the individual page for a book
+@app.route('/book/<string:isbn>', methods = ['GET'])
+def route_rootBook(isbn):
+    
+    #return a test page
+    return 'isbn: {}'.format(isbn)
 
 #the login page
 @app.route('/login', methods = ['GET', 'POST'])

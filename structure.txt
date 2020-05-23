@@ -10,3 +10,4 @@ DONE   GET/POST   /register - register account
 DONE   POST       /authlogin - authenticate log in attempt
 DONE   POST       /authregister - authenticate register attempt
 DONE   POST       /logout - log the user out
+WIP    GET        /book/<isbn> - view a specific book

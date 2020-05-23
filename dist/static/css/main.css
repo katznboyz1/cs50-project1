@@ -1,4 +1,4 @@
-body{width:100vw;height:100vh;margin:0px;padding:0px;overflow:hidden;background-color:#e0e0e0 !important;}
+body{width:100vw;height:100vh;margin:0px;padding:0px;overflow:hidden;overflow-y:scroll;background-color:#e0e0e0 !important;}
 #bodyContentParent{width:100%;margin:0px;padding:0px;height:calc(100% - 56px);}
 .loginFormWrapper{display:flex;align-items:center;flex-direction:column;justify-content:center;width:100%;min-height:100%;padding:20px;} /*https://bootsnipp.com/snippets/dldxB*/
 #loginFormParent{-webkit-border-radius:10px 10px 10px 10px;border-radius:10px 10px 10px 10px;background:#ffffff;padding:30px;width:90%;max-width:450px;position:relative;padding:0px;-webkit-box-shadow:0 30px 60px 0 rgba(0,0,0,0.3);box-shadow:0 30px 60px 0 rgba(0,0,0,0.3);text-align:center;} /*https://bootsnipp.com/snippets/dldxB*/
@@ -11,3 +11,4 @@ input[type=text], input[type=password]{background-color: #f6f6f6;border:none;col
 #mainBookSearchContent{margin:20px;width:calc(100% - 20px - 20px);padding:0px;}
 #mainBookSearchContentText1{margin-bottom:5px;}
 #mainBookSearchContentText2{margin:5px;margin-left:0px;}
+.list-group-item p{margin:5px;}
