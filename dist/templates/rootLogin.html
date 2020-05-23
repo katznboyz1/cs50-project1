@@ -3,6 +3,8 @@
 {% block bodyContent %}
 <div class = 'loginFormWrapper'>
     <div id = 'loginFormParent'>
+        <img id = 'loginFormTopImage' src = "{{ url_for('static', filename = 'images/readit-logo-128x128.png') }}">
+        <p>Log into an existing account</p>
         <form id = 'loginForm' action = "{{ url_for('route_rootAuthLogin') }}" method = 'post'>
             <input type = 'text' placeholder = 'Username' name = 'username'/>
             <input type = 'password' placeholder = 'Password' name = 'password'/>
