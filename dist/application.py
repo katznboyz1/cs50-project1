@@ -81,7 +81,7 @@ def route_rootRegister():
     return flask.render_template('rootRegister.html', loggedIn = False if flask.session.get('logged_in') == None else True, registerErrorMessage = '')
 
 #the logout page
-@app.route('/logout', methods = ['GET', 'POST']) #make it so that this is only post accessable
+@app.route('/logout', methods = ['POST']) #make it so that this is only post accessable
 def route_rootLogout():
 
     #log the user out

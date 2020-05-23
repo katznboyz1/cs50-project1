@@ -26,7 +26,9 @@
                     <a class = 'nav-item nav-link active' href = "{{ url_for('route_rootLogin') }}">Log In</a>
                     <a class = 'nav-item nav-link active' href = "{{ url_for('route_rootRegister') }}">Register</a>
                     {% else %}
-                    <a class = 'nav-item nav-link active' href = "{{ url_for('route_rootLogout') }}">Log Out</a>
+                    <form id = 'logoutForm' action = "{{ url_for('route_rootLogout') }}" method = 'post'></form>
+                        <a class = 'nav-item nav-link active' href = '#' onclick = "document.getElementById('logoutForm').submit();">Log Out</a>
+                    </div>
                     {% endif %}
                 </div>
             </div>
