@@ -4,14 +4,14 @@
 <div id = 'mainBookSearchContent'>
     <p id = 'mainBookSearchContentText1'>Search for a specific book:</p>
     <form class = 'form-inline' method = 'post' action = "{{ url_for('route_rootTest') }}">
-        <input class = 'form-control col-lg-9 col-sm-7' type = 'search' name = 'searchQuery' placeholder = 'Search by author, year, title, or ISBN'>
-        <select name = 'searchMethod' class = 'form-control col-lg-2 col-sm-3'>
+        <input class = 'form-control col-lg-9 col-sm-7 col-12' type = 'search' name = 'searchQuery' placeholder = 'Search by author, year, title, or ISBN'>
+        <select name = 'searchMethod' class = 'form-control col-lg-2 col-sm-3 col-7'>
             <option value = 'title'>Search by title</option>
             <option value = 'isbn'>Search by ISBN</option>
             <option value = 'author'>Search by author</option>
             <option value = 'year'>Search by year</option>
         </select>
-        <button class = 'btn col-lg-1 col-sm-2 btn-outline-primary' type = 'submit'>Search</button>
+        <button class = 'btn col-lg-1 col-sm-2 col-5 btn-outline-primary' type = 'submit'>Search</button>
     </form>
     <p id = 'mainBookSearchContentText2'>Or check out a randomly selected one:</p>
     <ul class = 'list-group'>
